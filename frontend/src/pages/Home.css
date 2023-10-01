@@ -1,0 +1,84 @@
+.main-content{
+  background-color:  #263043;
+  margin: 80px 20px;
+  border-radius: 40px;
+  height: auto;
+  padding: 10px;
+}
+
+.main-title {
+  
+  text-align: center;
+  font-size: 1.5em;
+
+}
+
+.add-btn{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 50% ;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 1000ms;
+}
+
+.add-btn:hover{
+  background-color:rgba(255, 255, 255, 0.4) !important;
+}
+
+.card-content{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mycard{
+  
+  border: 1px solid rgba(255, 255, 255, 0.2) ;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  width: 400px;
+  box-sizing: border-box; 
+  cursor: pointer;
+  transition: 1000ms;
+  z-index: 500px;
+
+}
+
+.mycard:hover{
+background-color:rgba(255, 255, 255, 0.1);
+transform: scale(1.1);
+}
+
+.EditBtn{
+  min-width: 80px;
+  position: relative;
+  left: 300px;
+}
+
+.father-title{
+  display: flex;
+  justify-content: space-between;
+}
+.title-icon{
+  position: relative;
+  top:20px;
+  right: 10px;
+}
+
+.card-icon{
+  margin-left: 10px;
+  font-size: 1.5em;
+  transition: 1000ms;
+}
+
+.card-icon:hover{
+  
+  transform: scale(1.3);
+}
+
+.delete-icon{
+  color: red;
+}
