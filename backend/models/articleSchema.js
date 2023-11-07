@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 // define the Schema (the structure of the article)
 const articleSchema = new Schema({
-    userName:String,
+    username:String,
     title: String,
     summary: String,
     body: String,

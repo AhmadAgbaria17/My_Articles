@@ -2,7 +2,7 @@ const Article = require("../../models/articleSchema")
 
 
 const getAllArticles= (req,res) => {
-  Article.find(function(err,response){
+  Article.find({username:req.params.username},function(err,response){
     res.json(response)
   });
 }
@@ -11,7 +11,7 @@ const postOneArticles = (req,res)=>{
   const article = new Article(req.body);
 
   article.save().then(result=>{
-    res.redirect("/")
+    res.redirect("/home")
   })
   .catch(err=>{
     console.log(err);

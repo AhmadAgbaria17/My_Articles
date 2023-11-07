@@ -1,10 +1,14 @@
 import React from 'react';
 import "./header.css"
+import { useAuthUser } from "react-auth-kit";
 
-const Header = () => {
+
+const Header = (props) => {
+  const auth = useAuthUser();
+
   return (
     <header>
-            <h2>Wellcome Ahmad</h2>
+            <h2>Wellcome {auth().username} </h2>
     </header>
   );
 }

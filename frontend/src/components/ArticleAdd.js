@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./form.css";
+import { useAuthUser } from "react-auth-kit";
+
 const ArticleAdd = ({closeAddArticle}) => {
 
-  const [inputs, setInputs] = useState({});
+  const auth = useAuthUser();
+
+  const [inputs, setInputs] = useState({username:auth().username});
   
 
   const validateForm=()=>{
@@ -23,14 +27,16 @@ const ArticleAdd = ({closeAddArticle}) => {
     if (!validateForm()) return;
   
     try {
-      const response = await fetch('http://localhost:5000/save', {
+      console.log(inputs)
+      const response = await fetch('http://localhost:5000/article/save', {
         method: 'POST',
         body: JSON.stringify(inputs),
         headers: {
           'Content-Type': 'application/json',
         },
       });
-  
+      closeAddArticle();
+
       if (!response.ok) {
         // Handle the case where the request was not successful, e.g., show an error message.
         throw new Error('Failed to add user');

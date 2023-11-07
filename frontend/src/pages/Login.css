@@ -1,0 +1,116 @@
+.mainTittle{
+  text-align: center;
+
+}
+
+.Basecounter{
+  display: flex;
+  position: relative;
+  left: 12.5%;
+  max-width: 75%;
+  background-color: #263043;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgb(0,0,0,0.3);
+}
+
+
+.Login{
+  width: 50%;
+  border-right: 1px solid white;
+  height: auto;
+  padding: 5px;
+  text-align: center;
+  
+
+
+}
+
+
+
+.Register{
+  width: 50%;
+  border-left: 1px solid white;
+  height: auto;
+  padding: 5px;
+  text-align: center;
+
+}
+
+.showsigninbtn{
+  width: 50%;
+  text-align: center;
+  border-right: 1px solid white;
+}
+
+
+.showsignupbtn{
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid white;
+}
+
+.showsigninbtn button , .showsignupbtn button{
+  
+}
+
+
+.OneForm{
+  display: flex;
+  margin-bottom: 15px;
+
+}
+.OneForm input{
+  display: inline-block;
+  width:60%;
+  font-size: 1.2em;
+}
+.OneForm label{
+  display: inline-block;
+  width: 30%;
+  font-size: 1.1em;
+
+}
+
+.LoginForm button{
+  font-size: 1.2em;
+}
+
+
+.RegisterForm button{
+  font-size: 1.2em;
+}
+
+.Showbtn{
+  margin-top: 10rem;
+  border: none;
+  background-color:rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2em;
+  box-shadow: 0px 0.2px 0.2px #ccc;
+  transition: 1500ms;
+  margin-bottom: 10rem;
+}
+
+
+
+.Showbtn:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.errorMSG{
+  color: red;
+  position: relative;
+  text-align: center;
+}
+
+
+
+.successMSG{
+  color: green;
+  position: relative;
+  text-align: center;
+}

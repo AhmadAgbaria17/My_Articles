@@ -6,6 +6,8 @@ var multer = require("multer");
 var upload = multer();
 
 
+require("dotenv").config();
+
 // for parsing application/json
 app.use(bodyParser.json());
 app.use(cors(3000));
@@ -39,10 +41,12 @@ mongoose.connect("mongodb+srv://ahagbaria99:Ahmf1144@cluster0.m4jkabh.mongodb.ne
 
 
 
-
 var articleRoute = require("./routes/Controllers/articleController");
-app.use("/", articleRoute);
+app.use("/article", articleRoute);
 
+
+var userRoute = require("./routes/Controllers/userController");
+app.use("/user", userRoute);
 
 
 

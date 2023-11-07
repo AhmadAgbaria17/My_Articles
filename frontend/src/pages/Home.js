@@ -4,17 +4,27 @@ import Header from "../components/header";
 import ArticleAdd from "../components/ArticleAdd";
 import ArticleUpdate from "../components/ArticleUpdate";
 import ArticleShow from "../components/ArticleShow";
+import { useSignOut,useAuthUser } from "react-auth-kit";
+import {  useNavigate } from "react-router-dom";
 
 const Home = () => {
 
+  const auth = useAuthUser();
 
+  const [compAddArticle, setCompAddArticle] = useState(false);
+  const [compEditArticle, setCompEditArticle] = useState(false);
+  const [compShowArticle, setCompShowArticle] = useState(false);
+  const [cardToEdit, setCardToEdit] = useState(null);
   const [my_article_data, setMy_article_data] = useState([{}]);
+
+
+
   useEffect(() => {
     fetchData();
   }, []);
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:5000/", {
+      const response = await fetch(`http://localhost:5000/article/${auth().username}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -30,14 +40,10 @@ const Home = () => {
     }
   }
 
-  const [compAddArticle, setCompAddArticle] = useState(false);
-  const [compEditArticle, setCompEditArticle] = useState(false);
-  const [compShowArticle, setCompShowArticle] = useState(false);
 
-  const [cardToEdit, setCardToEdit] = useState(null);
 
   const handleDelete = (idx) => {
-    fetch(`http://localhost:5000/delete/${idx}`, {
+    fetch(`http://localhost:5000/article/delete/${idx}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -69,6 +75,15 @@ const Home = () => {
   };
 
 
+  
+  const signout = useSignOut();
+  const navigate = useNavigate();
+
+  const logout = ()=>{
+    signout();
+    navigate("/")
+    
+  }
 
   return (
     <div>
@@ -151,6 +166,8 @@ const Home = () => {
             </div>
         
       </main>
+      <center><button onClick={logout} className="logout">Log Out</button></center>
+      
     </div>
   );
 };

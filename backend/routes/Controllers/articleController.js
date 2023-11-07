@@ -5,7 +5,7 @@ const articleServices = require("../Service/articleService")
 
 
 
-router.get("/", articleServices.getAllArticles)
+router.get("/:username", articleServices.getAllArticles)
 
 router.post("/save", articleServices.postOneArticles)
 

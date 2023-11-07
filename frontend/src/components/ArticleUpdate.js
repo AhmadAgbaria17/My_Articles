@@ -23,7 +23,7 @@ const ArticleUpdate = ({closeUpdateArticle,defaultValue}) => {
     if (!validateForm()) return;
   
     try {
-      const response = await fetch('http://localhost:5000/update', {
+      const response = await fetch('http://localhost:5000/article/update', {
         method: 'PUT',
         body: JSON.stringify(inputs),
         headers: {

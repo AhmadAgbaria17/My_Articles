@@ -82,3 +82,16 @@ transform: scale(1.1);
 .delete-icon{
   color: red;
 }
+
+.logout{
+  position: relative;
+  border: none;
+  background: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 600px;
+  bottom: 40px;
+}

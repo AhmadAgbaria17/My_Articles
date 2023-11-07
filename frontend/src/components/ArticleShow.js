@@ -2,20 +2,8 @@ import React, { useState } from "react";
 import "./form.css";
 const ArticleShow = ({closeShowArticle,defaultValue}) => {
 
-  const [inputs, setInputs] = useState(defaultValue||{});
+  const [inputs] = useState(defaultValue||{});
   
-
-  const validateForm=()=>{
-    if(inputs.title&&inputs.summary && inputs.body)
-    return true;
-  return false
-  }
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
-  }
 
 
   
