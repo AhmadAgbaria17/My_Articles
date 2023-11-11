@@ -4,6 +4,8 @@ const router = express.Router();
 
 const userServices = require("../Service/userService")
 
+router.get("/", userServices.getAllusers)
+
 
 router.post("/signup",userServices.postOneUser)
 

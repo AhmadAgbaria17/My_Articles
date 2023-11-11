@@ -2,6 +2,14 @@ const Article = require("../../models/articleSchema")
 
 
 const getAllArticles= (req,res) => {
+  Article.find(function(err,response){
+    console.log(response)
+    res.json(response)
+    
+  });
+}
+
+const getAlluserArticles= (req,res) => {
   Article.find({username:req.params.username},function(err,response){
     res.json(response)
   });
@@ -53,9 +61,10 @@ const articleDelete=  (req, res) => {
 
 
 module.exports= {
-  getAllArticles,
+  getAlluserArticles,
   postOneArticles,
   articleDelete,
-  articleUpdate
+  articleUpdate,
+  getAllArticles
 
 }

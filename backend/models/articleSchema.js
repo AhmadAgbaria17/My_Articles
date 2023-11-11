@@ -8,7 +8,7 @@ const articleSchema = new Schema({
     title: String,
     summary: String,
     body: String,
-    sharedWith:["",""]
+    sharedWith:[]
   });
 
   // Create a model based on that schema

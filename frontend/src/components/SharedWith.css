@@ -1,0 +1,31 @@
+.oneuser{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.card-icon-c{
+  position: relative;
+  top: 20px;
+  margin-left:60px;
+  font-size: 1.2em;
+  transition: 1000ms;
+  cursor: pointer;
+}
+
+.card-icon-c:hover{
+
+  color: green;
+}
+
+
+.articlesentAB{
+  position: relative;
+  top: 5px;
+  color: green;
+
+}
+
+
+
+

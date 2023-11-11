@@ -27,7 +27,6 @@ const ArticleAdd = ({closeAddArticle}) => {
     if (!validateForm()) return;
   
     try {
-      console.log(inputs)
       const response = await fetch('http://localhost:5000/article/save', {
         method: 'POST',
         body: JSON.stringify(inputs),

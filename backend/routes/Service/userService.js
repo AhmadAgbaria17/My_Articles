@@ -3,6 +3,12 @@ const User = require("../../models/userSchema");
 const jwt = require("jsonwebtoken");
 
 
+const getAllusers= (req,res) => {
+  User.find(function(err,response){
+    res.json(response)
+  });
+}
+
 
 const postOneUser = (req,res)=>{
   const user = new User(req.body);
@@ -56,6 +62,7 @@ const checklogin = async (req) => {
 module.exports= {
   postOneUser,
   checklogin,
+  getAllusers,
 
 }
 

@@ -32,10 +32,6 @@ const ArticleUpdate = ({closeUpdateArticle,defaultValue}) => {
       });
       closeUpdateArticle();
 
-      if (!response.ok) {
-        // Handle the case where the request was not successful, e.g., show an error message.
-        throw new Error('Failed to update user');
-      }
   
       // Close the form after a successful request.
     } catch (error) {
